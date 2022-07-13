@@ -1,5 +1,5 @@
 const Comment = require('./Comment');
-const Event = require('./Evemt');
+const Event = require('./Event');
 const Post = require('./Post');
 const User = require('./User');
 
