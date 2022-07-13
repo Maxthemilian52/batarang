@@ -34,18 +34,36 @@ const userSchema = new Schema(
             match: [/.+\@.+\..+/, "Must be a valid email address!"]
         },
         phone: {
-
+            type: String,
+            required: true,
+            match: [/^(\()?\d{3}(\))?(-|\s)?\d{3}(-|\s)\d{4}$/, "Must be a valid phone number!"]
+        },
+        address: {
+            type: String,
+            required: true
+        },
+        team: {
+            type: String,
+            required: true   
+        },
+        position: {
+            type: String,
+            required: true   
+        },
+        gradYear: {
+            type: Number,
+            required: true,
+            min: 4,
+            max: 4
         }
-
+    },
+    {
+        toJSON: {
+            getters: true,
+        },
     }
-)
+);
 
-
-
-
-
-
-
-
+    const User = model('user', userSchema);
 
 module.exports = User;
