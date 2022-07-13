@@ -1,5 +1,5 @@
-const { Schema, Types } = require("mongoose") 
-const postSchema = require('./Post')
+const { Schema, Types, model } = require("mongoose") 
+
 
 const commentSchema = new Schema(
     {
@@ -19,7 +19,6 @@ const commentSchema = new Schema(
         type: Date,
         default: Date.now()
       },
-      post: [postSchema]
     },
     {
       toJSON: {
@@ -32,6 +31,5 @@ const commentSchema = new Schema(
 //     return this.comment.length
 //   });
 
-    const Comment = model('comment', commentSchema)
 
-module.exports = Comment;
+module.exports = commentSchema;

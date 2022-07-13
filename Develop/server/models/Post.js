@@ -1,5 +1,5 @@
 const { Schema, model } = require("mongoose")
-
+const commentSchema = require('./Comment')
 const postSchema = new Schema(
     {
         postBody: {
@@ -13,8 +13,10 @@ const postSchema = new Schema(
         createdAt: {
             type: Date,
             default: Date.now()
-        }
+        },
+        comments:[commentSchema]
     }
+
 )
 
 const Post = model('post', postSchema);
