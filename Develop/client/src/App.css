@@ -36,3 +36,33 @@
     transform: rotate(360deg);
   }
 }
+
+.icon {
+  max-width: 48px;
+  padding: 0.3rem;
+}
+
+.header1 {
+  background-color: black;
+  padding: 1rem;
+  color: white;
+}
+
+.header2 { 
+  background-color: white;
+}
+
+.navBtn {
+  background-color: white;
+  border: none;
+  padding: 0.3rem; 
+}
+
+.btn {
+  background-color: white;
+}
+
+.btn:hover {
+  background-color: grey;
+  color: white;
+}
