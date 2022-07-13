@@ -21,7 +21,7 @@ function Header() {
                     <h2>Volunteer Blog</h2>
                 </div>
                 <div>
-                    <a className="navBtn" href='/home'><button className="btn btn-light">Home</button></a>
+                    <a className="navBtn" href='/'><button className="btn btn-light">Home</button></a>
                     <a className="navBtn" href='/posts'><button className="btn btn-light">Posts</button></a>
                     <a className="navBtn" href='/directory'><button className="btn btn-light">Directory</button></a>
                     <a className="navBtn" href='/events'><button className="btn btn-light">Events</button></a>
