@@ -5,17 +5,15 @@ const postSchema = new Schema(
             type: String,
             required: true,
         },
-        firstName: {
-            type: String,
-            required: true
-        },
-        lastName: {
-            type: String,
-            required: true
+        postAuthor: {
+          type: String,
+          required: true,
+
         },
         createdAt: {
             type: Date,
-            default: Date.now()
+            default: Date.now(),
+            get: (timestamp) => dateFormat(timestamp),
         },
         comments:[{
             commentBody: {

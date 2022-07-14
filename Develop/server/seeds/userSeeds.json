@@ -2,7 +2,6 @@
     {
         "username": "user1",
         "password": "password1",
-        "administrator": "true",
         "firstName": "First1",
         "lastName": "Last1",
         "email": "email@email1.com",
@@ -15,7 +14,6 @@
     {
         "username": "user2",
         "password": "password2",
-        "administrator": "false",
         "firstName": "First2",
         "lastName": "Last2",
         "email": "email@email2.com",
@@ -28,7 +26,6 @@
     {
         "username": "user3",
         "password": "password3",
-        "administrator": "false",
         "firstName": "First3",
         "lastName": "Last3",
         "email": "email@email3.com",
@@ -41,7 +38,6 @@
     {
         "username": "user4",
         "password": "password4",
-        "administrator": "false",
         "firstName": "First4",
         "lastName": "Last4",
         "email": "email@email4.com",
@@ -54,7 +50,6 @@
     {
         "username": "user5",
         "password": "password5",
-        "administrator": "false",
         "firstName": "First5",
         "lastName": "Last5",
         "email": "email@emai5.com",
