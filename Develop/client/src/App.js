@@ -4,6 +4,8 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { ApolloClient, ApolloProvider, InMemoryCache } from '@apollo/client';
 import Home from './components/pages/Home'
 import Posts from './components/pages/Posts'
+import Events from './components/pages/Events'
+
 
 
 
@@ -29,11 +31,11 @@ function App() {
             {/* <Route 
               path="/directory" 
               element={<Directory />}
-            />
+            /> */}
             <Route 
               path="/events"
               element={<Events />}
-            /> */}
+            /> 
           </Routes>
         </div>
       </Router>
