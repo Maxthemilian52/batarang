@@ -1,0 +1,67 @@
+[
+    {
+        "username": "user1",
+        "password": "password1",
+        "administrator": "true",
+        "firstName": "First1",
+        "lastName": "Last1",
+        "email": "email@email1.com",
+        "phone": "111-111-1111",
+        "address": "123 Test Dr. Columbus, Oh 43210",
+        "team": "team1",
+        "position": "BossBitch1",
+        "gradYear": "2011"
+    },
+    {
+        "username": "user2",
+        "password": "password2",
+        "administrator": "false",
+        "firstName": "First2",
+        "lastName": "Last2",
+        "email": "email@email2.com",
+        "phone": "111-111-1112",
+        "address": "1234 Test Dr. Columbus, Oh 43210",
+        "team": "team2",
+        "position": "BossBitch2",
+        "gradYear": "2012"
+    },
+    {
+        "username": "user3",
+        "password": "password3",
+        "administrator": "false",
+        "firstName": "First3",
+        "lastName": "Last3",
+        "email": "email@email3.com",
+        "phone": "111-111-1113",
+        "address": "12345 Test Dr. Columbus, Oh 43210",
+        "team": "team3",
+        "position": "BossBitch3",
+        "gradYear": "2013"
+    },
+    {
+        "username": "user4",
+        "password": "password4",
+        "administrator": "false",
+        "firstName": "First4",
+        "lastName": "Last4",
+        "email": "email@email4.com",
+        "phone": "111-111-1114",
+        "address": "123456 Test Dr. Columbus, Oh 43210",
+        "team": "team4",
+        "position": "BossBitch4",
+        "gradYear": "2014"
+    },
+    {
+        "username": "user5",
+        "password": "password5",
+        "administrator": "false",
+        "firstName": "First5",
+        "lastName": "Last5",
+        "email": "email@emai5.com",
+        "phone": "111-111-1115",
+        "address": "1 Test Dr. Columbus, Oh 43210",
+        "team": "team4",
+        "position": "BossBitch4",
+        "gradYear": "2014"
+    }
+]
