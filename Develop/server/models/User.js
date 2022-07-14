@@ -55,13 +55,15 @@ const userSchema = new Schema(
             required: true,
             min: 4,
             max: 4
-        }
-    },
-    {
-        toJSON: {
-            getters: true,
         },
-    }
+        posts: [
+            {
+              type: Schema.Types.ObjectId,
+              ref: 'Post',
+            },
+          ],
+    },
+
 );
 
     const User = model('user', userSchema);

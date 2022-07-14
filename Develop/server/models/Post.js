@@ -1,5 +1,4 @@
 const { Schema, model } = require("mongoose")
-const commentSchema = require('./Comment')
 const postSchema = new Schema(
     {
         postBody: {
@@ -18,7 +17,27 @@ const postSchema = new Schema(
             type: Date,
             default: Date.now()
         },
-        comments:[commentSchema]
+        comments:[{
+            commentBody: {
+                type: String,
+                required: true,
+                minlength: 1,
+                maxlength: 280,
+              },
+              firstName: {
+                type: String,
+                required: true,
+              },
+              lastName: {
+                type: String,
+                required: true,
+              },
+              createdAt: {
+                type: Date,
+                default: Date.now,
+                get: (timestamp) => dateFormat(timestamp),
+              },
+        }]
     }
 
 )
