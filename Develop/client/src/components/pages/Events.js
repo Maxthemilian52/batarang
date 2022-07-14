@@ -1,12 +1,11 @@
 import React from 'react';
-import Header from '../Header'
+
 
 
 
 function Events() {
     return (
         <body>
-        <Header></Header>
             <div>
                 <div class="allEvents">
                         <div>
