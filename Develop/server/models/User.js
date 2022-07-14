@@ -12,10 +12,7 @@ const userSchema = new Schema(
             type: String,
             required: true
         },
-        administrator: {
-            type: Boolean,
-            required: true
-        },
+     
         firstName: {
             type: String,
             required: true,
