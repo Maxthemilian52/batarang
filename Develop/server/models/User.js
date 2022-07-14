@@ -10,10 +10,9 @@ const userSchema = new Schema(
         },
         password: {
             type: String,
-            required: true,
-            unique: true
+            required: true
         },
-        administator: {
+        administrator: {
             type: Boolean,
             required: true
         },
@@ -53,8 +52,7 @@ const userSchema = new Schema(
         gradYear: {
             type: Number,
             required: true,
-            min: 4,
-            max: 4
+            
         }
     },
     {
