@@ -3,8 +3,6 @@ const { gql } = require('apollo-server-express');
 const typeDefs = gql`
       type User {
         _id: ID
-        username: String
-        administrator: Boolean
         firstName: String
         lastName: String
         email: String
@@ -13,6 +11,11 @@ const typeDefs = gql`
         team: String
         position: String
         gradYear: Int
+      }
+
+      type Auth {
+        token: ID!
+        user: User
       }
 
       type Event {
