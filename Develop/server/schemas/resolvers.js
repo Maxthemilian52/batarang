@@ -1,5 +1,6 @@
 const { AuthenticationError } = require('apollo-server-express');
 const { Event, Post, User } = require('../models');
+const { signToken } = require('../utils/auth')
 
 const resolvers = {
     Query: {
@@ -24,26 +25,27 @@ const resolvers = {
 
 Mutation: {
   addProfile: async (parent, { firstName, lastName, email, phone, address, team, position, gradYear, password }) => {
-    const profile = await Profile.create({ firstName, lastName, email, phone, address, team, position, gradYear, password  });
-    const token = signToken(profile);
-
-    return { token, profile };
+    const user = await User.create({ firstName, lastName, email, phone, address, team, position, gradYear, password  });
+    console.log(user)
+    const token = signToken(user);
+    console.log(token)
+    return { token, user };
   },
   login: async (parent, { email, password }) => {
-    const profile = await Profile.findOne({ email });
+    const user = await User.findOne({ email });
 
-    if (!profile) {
+    if (!user) {
       throw new AuthenticationError('No profile with this email found!');
     }
 
-    const correctPw = await profile.isCorrectPassword(password);
+    const correctPw = await user.isCorrectPassword(password);
 
     if (!correctPw) {
       throw new AuthenticationError('Incorrect password!');
     }
 
-    const token = signToken(profile);
-    return { token, profile };
+    const token = signToken(user);
+    return { token, user };
   },
 },
 }

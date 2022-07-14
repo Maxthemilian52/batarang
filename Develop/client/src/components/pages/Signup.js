@@ -37,11 +37,10 @@ const Signup = () => {
     console.log(formState);
 
     try {
-      const { data } = await addProfile({
+      const { data }  = await addProfile({
         variables: { ...formState },
       });
-
-      Auth.login(data.addProfile.token);
+      Auth.login(data.login.token);
     } catch (e) {
       console.error(e);
     }
@@ -66,7 +65,7 @@ const Signup = () => {
                   placeholder="*First Name"
                   name="firstName"
                   type="text"
-                  value={formState.name}
+                  value={formState.firstName}
                   onChange={handleChange}
                 />
                 <input
@@ -74,7 +73,7 @@ const Signup = () => {
                   placeholder="*Last Name"
                   name="lastName"
                   type="text"
-                  value={formState.name}
+                  value={formState.lastName}
                   onChange={handleChange}
                 />
                 <input
@@ -90,7 +89,7 @@ const Signup = () => {
                   placeholder="*Phone #"
                   name="phone"
                   type="text"
-                  value={formState.name}
+                  value={formState.phone}
                   onChange={handleChange}
                 />
                 <input
@@ -98,7 +97,7 @@ const Signup = () => {
                   placeholder="*Address"
                   name="address"
                   type="text"
-                  value={formState.name}
+                  value={formState.address}
                   onChange={handleChange}
                 />
                 <input
@@ -106,7 +105,7 @@ const Signup = () => {
                   placeholder="*Team"
                   name="team"
                   type="text"
-                  value={formState.name}
+                  value={formState.team}
                   onChange={handleChange}
                 />
                 <input
@@ -114,7 +113,7 @@ const Signup = () => {
                   placeholder="*Position"
                   name="position"
                   type="text"
-                  value={formState.name}
+                  value={formState.position}
                   onChange={handleChange}
                 />
                 <input
@@ -122,7 +121,7 @@ const Signup = () => {
                   placeholder="*gradYear"
                   name="gradYear"
                   type="text"
-                  value={formState.name}
+                  value={formState.gradYear}
                   onChange={handleChange}
                 />
                 <input
