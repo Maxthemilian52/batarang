@@ -1,10 +1,33 @@
 import React from 'react';
-import Header from '../Header'
+import art1 from '../../assets/images/image1.png';
+import art2 from '../../assets/images/image2.png';
+import art3 from '../../assets/images/image3.png';
+import art4 from '../../assets/images/image4.png';
 
 function Home() {
     return (
-        <Header></Header>
-        
+        <main>
+            
+            <div className='d-flex flex-row justify-content-around flex-wrap p-4'>
+                <img className='d-flex' src={art1} alt='CMA Art'></img>
+                <img className='d-flex' src={art2} alt='CMA Art'></img>
+                <img className='d-flex' src={art3} alt='CMA Art'></img>
+                <img className='d-flex' src={art4} alt='CMA Art'></img>
+            </div>
+            <div className='missionStatement d-flex flex-column align-items-center p-4'>
+                <h2>Mission:</h2>
+                <p>Our mission is to maintain a website where CMA Docents can see up-to-date information; such as, active 
+docents and their contact information, policies and procedures, tour 
+availability, educational resources and be able to communicate in a 
+social media format.</p>
+                <h3>Where is Everything?</h3>
+                <ul>
+                    <li>Posts: This page will have all of the blog posts that Docents have posted for others to see</li>
+                    <li>Directory: This page will provide the contact information for all active docents</li>
+                    <li>Events: This page will show all of the current events scheduled for docents, and how many volunteers are needed</li>
+                </ul>
+            </div>
+        </main>
     );
 }
 
