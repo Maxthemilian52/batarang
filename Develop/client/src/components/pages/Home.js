@@ -1,5 +1,4 @@
 import React from 'react';
-import Header from '../Header';
 import art1 from '../../assets/images/image1.png';
 import art2 from '../../assets/images/image2.png';
 import art3 from '../../assets/images/image3.png';
@@ -8,7 +7,7 @@ import art4 from '../../assets/images/image4.png';
 function Home() {
     return (
         <main>
-            <Header></Header>
+            
             <div className='d-flex flex-row justify-content-around flex-wrap p-4'>
                 <img className='d-flex' src={art1} alt='CMA Art'></img>
                 <img className='d-flex' src={art2} alt='CMA Art'></img>

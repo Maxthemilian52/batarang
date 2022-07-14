@@ -25,6 +25,7 @@ function Header() {
                     <a className="navBtn" href='/posts'><button className="btn btn-light">Posts</button></a>
                     <a className="navBtn" href='/directory'><button className="btn btn-light">Directory</button></a>
                     <a className="navBtn" href='/events'><button className="btn btn-light">Events</button></a>
+                    <a className="navBtn" href='/signup'><button className="btn btn-light">Signup</button></a>
                 </div>
             </div>
         </header>
