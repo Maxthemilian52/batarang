@@ -2,10 +2,15 @@ import logo from './logo.svg';
 import './App.css';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { ApolloClient, ApolloProvider, InMemoryCache } from '@apollo/client';
+import Header from './components/Header/Header'
 import Home from './components/pages/Home'
 import Posts from './components/pages/Posts'
+<<<<<<< HEAD
+import Signup from './components/pages/Signup'
+=======
 import Events from './components/pages/Events'
 
+>>>>>>> 7591b8508116cbecc5d5ce7e73f6a682d6f6657d
 
 
 
@@ -17,6 +22,7 @@ const client = new ApolloClient({
 function App() {
   return (
     <ApolloProvider client={client}>
+      <Header></Header>
       <Router>
         <div className="flex-column justify-center align-center min-100-vh">
           <Routes>
@@ -27,6 +33,10 @@ function App() {
             <Route 
               path="/posts" 
               element={<Posts />}
+            />
+            <Route 
+            path="/signup"
+            element={<Signup />}
             />
             {/* <Route 
               path="/directory" 
