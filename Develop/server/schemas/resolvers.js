@@ -6,21 +6,28 @@ const resolvers = {
       users: async () => {
         return User.find({});
       },
-      user: async (parent, { username }) => {
-        return User.findOne({ username }).populate('posts')
-      },
       event: async () => {
         return Event.find({});
       },
-      comment: async (parent, { postId }, context) => {
-        if(context.user) {
-          return Post.findOne({ _id: postId })
-        }
-     },
       post: async () => {
         return Post.find({});
-    },
-}
+      },
+      // comment: async (parent, { postId }, context) => {
+        //     if(context.user) {
+        //       return Post.findOne({ _id: postId })
+        //     }
+        //  },
+         // user: async (parent, { username }) => {
+      //   return User.findOne({ username }).populate('posts')
+      // },
+},
+      // Mutation: {
+      //   addProfile: async (parent, { username, email, password }) => {
+      //     const user = await User.create({ username, email, password });
+      //     const token = signToken(user);
+      //     return { token, user };
+      //   },
+      // }
 };
 
 module.exports = resolvers;
