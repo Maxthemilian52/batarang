@@ -117,3 +117,20 @@ ul {
   margin: 4px;
 
 }
+
+.signupForm {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 4px;
+}
+
+input {
+  padding: 4px;
+  margin: 4px;
+}
+
+.signupHeader {
+  background-color: antiquewhite;
+}

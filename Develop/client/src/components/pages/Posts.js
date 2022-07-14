@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import Header from '../Header'
 // import { QUERY_POSTS} from '../../utils/queries'
 
 
@@ -9,7 +8,6 @@ function Posts() {
 
     return (
         <body>
-            <Header></Header>
             <div className='postPage'>
                 <div className='card postCard outlineCard align-items-center'>
                     <div>
