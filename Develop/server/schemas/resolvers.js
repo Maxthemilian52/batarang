@@ -21,13 +21,31 @@ const resolvers = {
       //   return User.findOne({ username }).populate('posts')
       // },
 },
-      // Mutation: {
-      //   addProfile: async (parent, { username, email, password }) => {
-      //     const user = await User.create({ username, email, password });
-      //     const token = signToken(user);
-      //     return { token, user };
-      //   },
-      // }
-};
+
+Mutation: {
+  addProfile: async (parent, { firstName, lastName, email, phone, address, team, position, gradYear, password }) => {
+    const profile = await Profile.create({ firstName, lastName, email, phone, address, team, position, gradYear, password  });
+    const token = signToken(profile);
+
+    return { token, profile };
+  },
+  login: async (parent, { email, password }) => {
+    const profile = await Profile.findOne({ email });
+
+    if (!profile) {
+      throw new AuthenticationError('No profile with this email found!');
+    }
+
+    const correctPw = await profile.isCorrectPassword(password);
+
+    if (!correctPw) {
+      throw new AuthenticationError('Incorrect password!');
+    }
+
+    const token = signToken(profile);
+    return { token, profile };
+  },
+},
+}
 
 module.exports = resolvers;

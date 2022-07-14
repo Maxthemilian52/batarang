@@ -7,6 +7,7 @@ import Home from './components/pages/Home'
 import Posts from './components/pages/Posts'
 import Signup from './components/pages/Signup'
 import Events from './components/pages/Events'
+import Login from './components/pages/Login'
 
 
 
@@ -34,6 +35,10 @@ function App() {
             <Route 
             path="/signup"
             element={<Signup />}
+            />
+             <Route 
+            path="/login"
+            element={<Login />}
             />
             {/* <Route 
               path="/directory" 
