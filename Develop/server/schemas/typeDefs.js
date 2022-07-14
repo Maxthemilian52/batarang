@@ -15,8 +15,33 @@ const typeDefs = gql`
         gradYear: Int
       }
 
+      type Event {
+        eventName: String
+        date: Int
+        volunteers: String
+      }
+
+      type Comment {
+        _id: ID
+        commentBody: String
+        firstName: String
+        lastName: String
+        createdAt: Int
+      }
+
+      type Post {
+        postBody: String
+        firstName: String
+        lastName: String
+        createdAt: Int
+        comments: [Comment]!
+      }
+
       type Query {
         users: [User]
+        event: [Event]
+        comment: [Comment]
+        post: [Post]
       }
     
 
