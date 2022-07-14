@@ -1,4 +1,12 @@
 
+p {
+  font-size: 1.25rem;
+}
+
+ul {
+  font-size: 1.25rem;
+}
+
 .App {
   text-align: center;
 }
@@ -75,6 +83,19 @@
 
 .postPage {
   margin: 1rem 1rem;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.postCard {
+  width: 55%;
+}
+
+.eventCard {
+  display: flex;
+  width: 40%;
 }
 
 .outlineCard {
@@ -83,4 +104,16 @@
   margin: 0;
   padding: 0;
   position: relative;
+  background-color: antiquewhite;
+}
+
+.missionStatement {
+  background-color: antiquewhite;
+}
+
+.card {
+  border-radius: 0px;
+  padding: 1rem;
+  margin: 4px;
+
 }
