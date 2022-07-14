@@ -118,6 +118,7 @@ ul {
 
 }
 
+<<<<<<< HEAD
 .signupForm {
   display: flex;
   flex-direction: row;
@@ -134,3 +135,25 @@ input {
 .signupHeader {
   background-color: antiquewhite;
 }
+=======
+.allEvents {
+  display: flex;
+  flex-direction: column;
+  border: solid 1px;
+  width: 10 1rem;
+  height: 700px;
+  background-color: tan;
+  margin: 2%;
+}
+
+.event1,
+.event2,
+.event3 {
+  display: flex;
+  flex-direction: column;
+  background-color: #282c34;
+  height: 10%;
+  width: 30%;
+  margin: 3%;
+}
+>>>>>>> 7591b8508116cbecc5d5ce7e73f6a682d6f6657d
