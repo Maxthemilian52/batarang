@@ -22,8 +22,8 @@ const typeDefs = gql`
       }
 
       type Comment {
-        postId: ID
-        reactionBody: String
+        _id: ID
+        commentBody: String
         firstName: String
         lastName: String
         createdAt: Int
@@ -34,13 +34,14 @@ const typeDefs = gql`
         firstName: String
         lastName: String
         createdAt: Int
-        
+        comments: [Comment]!
       }
 
       type Query {
         users: [User]
         event: [Event]
         comment: [Comment]
+        post: [Post]
       }
     
 

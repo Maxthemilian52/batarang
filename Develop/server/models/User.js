@@ -52,14 +52,15 @@ const userSchema = new Schema(
         gradYear: {
             type: Number,
             required: true,
-            
-        }
-    },
-    {
-        toJSON: {
-            getters: true,
         },
-    }
+        posts: [
+            {
+              type: Schema.Types.ObjectId,
+              ref: 'Post',
+            },
+          ],
+    },
+
 );
 
     const User = model('user', userSchema);

@@ -9,9 +9,12 @@ const resolvers = {
       event: async () => {
         return Event.find({});
     },
-    users: async () => {
-      return Comment.find({});
-  },
+      comment: async () => {
+        return Post.find({});
+    },
+      post: async () => {
+        return Comment.find({});
+    },
 }
 };
 
