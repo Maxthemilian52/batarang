@@ -13,15 +13,7 @@ const resolvers = {
       post: async () => {
         return Post.find({});
       },
-      // comment: async (parent, { postId }, context) => {
-        //     if(context.user) {
-        //       return Post.findOne({ _id: postId })
-        //     }
-        //  },
-         // user: async (parent, { username }) => {
-      //   return User.findOne({ username }).populate('posts')
-      // },
-},
+    },
 
 Mutation: {
   addProfile: async (parent, { firstName, lastName, email, phone, address, team, position, gradYear, password }) => {
