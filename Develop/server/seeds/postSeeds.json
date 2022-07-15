@@ -1,18 +1,27 @@
 [
     {
         "postBody": "David is a JS Native",
-        "postAuthor": "asdf"
+        "postAuthor": "asdf",
+        "firstName": "max",
+        "lastName": "shaw"
+
     },
     {
         "postBody": "David is a JS Native",
-        "postAuthor": "asdfdf"
+        "postAuthor": "asdfdf",
+        "firstName": "bill",
+        "lastName": "hardgrove"
     },
     {
         "postBody": "David is a JS Native",
-        "postAuthor": "asdfasdf"
+        "postAuthor": "asdfasdf",
+        "firstName": "david",
+        "lastName": "deitz"
     },
     {
         "postBody": "David is a JS Native",
-        "postAuthor": "asdfae"
+        "postAuthor": "asdfae",
+        "firstName": "marcus",
+        "lastName": "martinez"
     }
 ]

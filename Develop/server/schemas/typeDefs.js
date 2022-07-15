@@ -34,9 +34,8 @@ const typeDefs = gql`
 
       type Post {
         postBody: String
-        firstName: String
-        lastName: String
-        createdAt: Int
+        postAuthor: String
+        createdAt: String
         comments: [Comment]!
       }
 
@@ -45,7 +44,7 @@ const typeDefs = gql`
         user(email: String!): User
         event: [Event]
         comment: [Comment]
-        posts(email: String): [Post]
+        posts: [Post]
         post(postId: ID!): Post
       }
     
@@ -53,6 +52,9 @@ const typeDefs = gql`
       addProfile(firstName: String!, lastName: String!, email: String!, phone: String!, address: String!, team: String, position: String, gradYear: String! password: String!): Auth
       login(email: String!, password: String!): Auth
       addPost(title: String!, postContent: String!): Auth
+      removePost(postId: ID!): Post
+      addComment(postId: ID!, commentBody: String!): Post
+      removeComment(posttId: ID!, commentId: ID!): Post
     }
 
 

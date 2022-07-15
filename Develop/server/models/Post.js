@@ -1,4 +1,5 @@
 const { Schema, model } = require("mongoose")
+const dateFormat = require("../utils/dateFormat")
 const postSchema = new Schema(
     {
         postBody: {
@@ -22,11 +23,7 @@ const postSchema = new Schema(
                 minlength: 1,
                 maxlength: 280,
               },
-              firstName: {
-                type: String,
-                required: true,
-              },
-              lastName: {
+              commentAuthor: {
                 type: String,
                 required: true,
               },
