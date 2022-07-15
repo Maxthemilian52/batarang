@@ -50,6 +50,7 @@ ul {
   padding: 0.3rem;
 }
 
+
 .header1 {
   background-color: black;
   padding: 1rem;
@@ -231,4 +232,23 @@ h1 {
 
 .signupCenter .card {
   width: 100%;
+}
+
+.carousel {
+  max-width: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid white;
+  object-fit: contain;
+}
+
+.backgroundImg {
+  background: url(./assets/images/cma.jpg) no-repeat center center fixed;
+background-size: cover;
+height: 100vh;
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
 }
