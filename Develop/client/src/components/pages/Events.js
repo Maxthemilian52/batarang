@@ -32,8 +32,7 @@ function Events() {
                         </div>
                         
                     </div>
-                    <div class="pageSelector1">
-                    <div class="pageSelector">Page <div><a href="">1</a></div><div><a href="">2</a></div><div><a href="">3</a></div><div><a href="">4</a></div><div><a href="">5</a></div></div>
+                    <div class="pageSelector"><div><h1 class="pageNumber"><a href="">1</a> <a href="">2</a> <a href="">3</a> <a href="">4</a> <a href="">5</a></h1></div><div><h1 class="page">Page</h1></div>
                     </div>
                 </div>
                 
