@@ -7,21 +7,21 @@ const resolvers = {
       users: async () => {
         return User.find({});
       },
-      user: async (parent, { firstName, lastName }) => {
-        return User.findOne({ firstName, lastName }).populate('posts')
+      user: async (parent, { email }) => {
+        return User.findOne({ email })
       },
+      // post: async (parent, { postId }) => {
+      //   return Post.findOne({ _id: postId });
+      // },
+      // posts: async (parent, { email }) => {
+      //   const params = email ? { email } : {};
+      //   return Post.find(params).sort({ createdAt: -1 });
+      // },
       event: async () => {
         return Event.find({});
       },
-      post: async () => {
-        return Post.find({});
-      },
-<<<<<<< HEAD
+
     },
-=======
-      
-},
->>>>>>> daeea0fbead439099115a5de26ea9e3d5921d965
 
 Mutation: {
   addProfile: async (parent, { firstName, lastName, email, phone, address, team, position, gradYear, password }) => {
