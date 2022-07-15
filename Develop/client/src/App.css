@@ -61,7 +61,6 @@ ul {
 }
 
 .navBtn {
-  background-color: white;
   border: none;
   padding: 0.3rem; 
 }
@@ -117,12 +116,16 @@ ul {
 
 }
 
+textarea {
+  height: 10rem;
+  scroll-behavior: auto;
+}
 
 .signupForm {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center;
-  flex-wrap: wrap;
+  flex-wrap: no-wrap;
   padding: 4px;
 }
 
@@ -139,6 +142,7 @@ input {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
 }
 
 .signupCenter {
@@ -210,4 +214,17 @@ a:hover {
 .pageNumber {
   margin-top: 0.5%;
   font-size: 200%;
+}
+
+.postForm {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 4px;
+  width: 100%
+}
+
+.signupCenter .card {
+  width: 100%;
 }

@@ -60,6 +60,7 @@ const Signup = () => {
             ) : (
               <form className='signupForm' onSubmit={handleFormSubmit}>
                 <div className='signupForm'>
+                  <h6>First Name:</h6>
                 <input
                   className="form-input"
                   placeholder="*First Name"
@@ -68,6 +69,8 @@ const Signup = () => {
                   value={formState.firstName}
                   onChange={handleChange}
                 />
+                <br></br>
+                <h6>Last Name:</h6>
                 <input
                   className="form-input"
                   placeholder="*Last Name"
@@ -76,6 +79,7 @@ const Signup = () => {
                   value={formState.lastName}
                   onChange={handleChange}
                 />
+                <h6>Email:</h6>
                 <input
                   className="form-input"
                   placeholder="*Your email"
@@ -84,6 +88,7 @@ const Signup = () => {
                   value={formState.email}
                   onChange={handleChange}
                 />
+                <h6>Phone #:</h6>
                 <input
                   className="form-input"
                   placeholder="*Phone #"
@@ -92,6 +97,7 @@ const Signup = () => {
                   value={formState.phone}
                   onChange={handleChange}
                 />
+                <h6>Address:</h6>
                 <input
                   className="form-input"
                   placeholder="*Address"
@@ -100,6 +106,7 @@ const Signup = () => {
                   value={formState.address}
                   onChange={handleChange}
                 />
+                <h6>Team:</h6>
                 <input
                   className="form-input"
                   placeholder="*Team"
@@ -108,6 +115,7 @@ const Signup = () => {
                   value={formState.team}
                   onChange={handleChange}
                 />
+                <h6>Position:</h6>
                 <input
                   className="form-input"
                   placeholder="*Position"
@@ -116,6 +124,7 @@ const Signup = () => {
                   value={formState.position}
                   onChange={handleChange}
                 />
+                <h6>Grad Year:</h6>
                 <input
                   className="form-input"
                   placeholder="*gradYear"
@@ -124,6 +133,7 @@ const Signup = () => {
                   value={formState.gradYear}
                   onChange={handleChange}
                 />
+                <h6>Password:</h6>
                 <input
                   className="form-input"
                   placeholder="*password*"

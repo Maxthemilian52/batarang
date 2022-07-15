@@ -20,7 +20,9 @@ const resolvers = {
       event: async () => {
         return Event.find({});
       },
-
+      post: async () => {
+        return Post.find({});
+      },
     },
 
 Mutation: {

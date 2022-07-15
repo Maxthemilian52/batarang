@@ -5,6 +5,7 @@ import { ApolloClient, ApolloProvider, InMemoryCache } from '@apollo/client';
 import Header from './components/Header/Header'
 import Home from './components/pages/Home'
 import Posts from './components/pages/Posts'
+import AddPost from './components/pages/AddPost'
 import Signup from './components/pages/Signup'
 import Events from './components/pages/Events'
 import Login from './components/pages/Login'
@@ -39,6 +40,10 @@ function App() {
              <Route 
             path="/login"
             element={<Login />}
+            />
+             <Route 
+            path="/addpost"
+            element={<AddPost />}
             />
             {/* <Route 
               path="/directory" 
