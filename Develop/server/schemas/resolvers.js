@@ -49,22 +49,22 @@ Mutation: {
     const token = signToken(user);
     return { token, user };
   },
-  // addPost: async (parent, { postText }, context) => {
-  //   if (context.user) {
-  //     const post = await Post.create({
-  //       postText,
-  //       postAuthor: context.user.firstName.lastName,
-  //     });
+  addPost: async (parent, { postText }, context) => {
+    if (context.user) {
+      const post = await Post.create({
+        postText,
+        postAuthor: context.user.firstName.lastName,
+      });
 
-  //     await User.findOneAndUpdate(
-  //       { _id: context.user._id },
-  //       { $addToSet: { posts: post._id } }
-  //     );
+      await User.findOneAndUpdate(
+        { _id: context.user._id },
+        { $addToSet: { posts: post._id } }
+      );
 
-  //     return post;
-  //   }
-  //   throw new AuthenticationError('You need to be logged in!');
-  // }
+      return post;
+    }
+    throw new AuthenticationError('You need to be logged in!');
+  }
 },
 }
 
