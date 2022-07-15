@@ -16,12 +16,7 @@ const resolvers = {
       post: async () => {
         return Post.find({});
       },
-<<<<<<< HEAD
     },
-=======
-      
-},
->>>>>>> daeea0fbead439099115a5de26ea9e3d5921d965
 
 Mutation: {
   addProfile: async (parent, { firstName, lastName, email, phone, address, team, position, gradYear, password }) => {
