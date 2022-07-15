@@ -190,18 +190,30 @@ input {
 
 .pageSelector {
   display: flex;
-  flex-direction: row;
-  justify-content: space-around;
+  text-align: center;
+  flex-direction: column;
+  margin-top: -4.5%;
+}
+a {
   text-decoration: none;
+  color: black;
 }
 
-.pageSelector {
-  color: green;
+a:hover {
+  text-decoration: none;
+  color: gray;
 }
 
-.pageSelector1 {
-  display: flex; 
-  justify-content: space-around;
+.page,.pageNumber {
+  margin-left: -1.7%;
+}
+.page {
+  font-size: 150%;
+}
+
+.pageNumber {
+  margin-top: 0.5%;
+  font-size: 200%;
 }
 
 .postForm {

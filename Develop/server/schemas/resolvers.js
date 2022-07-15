@@ -7,9 +7,16 @@ const resolvers = {
       users: async () => {
         return User.find({});
       },
-      user: async (parent, { firstName, lastName }) => {
-        return User.findOne({ firstName, lastName }).populate('posts')
+      user: async (parent, { email }) => {
+        return User.findOne({ email })
       },
+      // post: async (parent, { postId }) => {
+      //   return Post.findOne({ _id: postId });
+      // },
+      // posts: async (parent, { email }) => {
+      //   const params = email ? { email } : {};
+      //   return Post.find(params).sort({ createdAt: -1 });
+      // },
       event: async () => {
         return Event.find({});
       },
