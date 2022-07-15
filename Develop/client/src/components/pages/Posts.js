@@ -12,6 +12,7 @@ function Posts() {
                 <div className='card postCard outlineCard align-items-center'>
                     <div>
                         <h2>Posts</h2>
+                        <a className="navBtn" href='/addpost'><button className="btn btn-light">Add Post</button></a>
                     </div>
                         <div className='card w-100'>
             
