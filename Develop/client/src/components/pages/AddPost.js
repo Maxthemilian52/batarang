@@ -59,7 +59,6 @@ const AddPost = () => {
                 />
                 <h6>Content:</h6>
                 <textarea
-                  
                   className="form-input"
                   placeholder="*Post Content"
                   name="postContent"
