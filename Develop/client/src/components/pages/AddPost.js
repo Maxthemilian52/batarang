@@ -28,7 +28,7 @@ const AddPost = () => {
             const { data } = await createPost({
                 variable: { ...formState },
             })
-            Auth.loggedIn();
+            // Auth.loggedIn();
         } catch (e) {
             console.error(e);
         }

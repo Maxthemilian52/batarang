@@ -13,14 +13,14 @@ const resolvers = {
       post: async (parent, { postId }) => {
         return Post.findOne({ _id: postId });
       },
-      posts: async (parent, { postAuthor }) => {
-        const params = postAuthor ? { postAuthor } : {};
-        return Post.find(params).sort({ createdAt: -1 });
-      },
+      // posts: async (parent, { postAuthor }) => {
+      //   const params = postAuthor ? { postAuthor } : {};
+      //   return Post.find(params).sort({ createdAt: -1 });
+      // },
       event: async () => {
         return Event.find({});
       },
-      post: async () => {
+      posts: async () => {
         return Post.find({});
       },
     },
@@ -49,22 +49,23 @@ Mutation: {
     const token = signToken(user);
     return { token, user };
   },
-  // addPost: async (parent, { postText }, context) => {
-  //   if (context.user) {
-  //     const post = await Post.create({
-  //       postText,
-  //       postAuthor: context.user.firstName.lastName,
-  //     });
+  addPost: async (parent, { title, postContent }, context) => {
+    if (context.user) {
+      const post = await Post.create({
+        postContent,
+        title,
+        postAuthor: context.user.firstName.lastName,
+      });
+      
+      await User.findOneAndUpdate(
+        { _id: context.user._id },
+        { $addToSet: { posts: post._id } }
+      );
 
-  //     await User.findOneAndUpdate(
-  //       { _id: context.user._id },
-  //       { $addToSet: { posts: post._id } }
-  //     );
-
-  //     return post;
-  //   }
-  //   throw new AuthenticationError('You need to be logged in!');
-  // }
+      return post;
+    }
+    throw new AuthenticationError('You need to be logged in!');
+  }
 },
 }
 
