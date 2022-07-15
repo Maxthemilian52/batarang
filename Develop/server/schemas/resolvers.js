@@ -65,7 +65,57 @@ Mutation: {
       return post;
     }
     throw new AuthenticationError('You need to be logged in!');
-  }
+  },
+  removePost: async (parent, { postId }, context) => {
+    if (context.user) {
+      const post = await Post.findOneAndDelete({
+        _id: postId,
+        postAuthor: context.user.firstName.lastName,
+      });
+
+      await User.findOneAndUpdate(
+        { _id: context.user._id },
+        { $pull: { posts: post._id } }
+      );
+
+      return post;
+    }
+    throw new AuthenticationError('You need to be logged in!');
+  },
+  addComment: async (parent, { postId, commentText }, context) => {
+    if (context.user) {
+      return Post.findOneAndUpdate(
+        { _id: postId },
+        {
+          $addToSet: {
+            comments: { commentBody, commentAuthor: context.user.firstName.lastName },
+          },
+        },
+        {
+          new: true,
+          runValidators: true,
+        }
+      );
+    }
+    throw new AuthenticationError('You need to be logged in!');
+  },
+  removeComment: async (parent, { postId, commentId }, context) => {
+    if (context.user) {
+      return Post.findOneAndUpdate(
+        { _id: postId },
+        {
+          $pull: {
+            comments: {
+              _id: commentId,
+              commentAuthor: context.user.firstName.lastName,
+            },
+          },
+        },
+        { new: true }
+      );
+    }
+    throw new AuthenticationError('You need to be logged in!');
+  },
 },
 }
 
