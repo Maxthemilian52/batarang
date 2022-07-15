@@ -1,4 +1,7 @@
 import React from 'react';
+import ReactDOM from 'react-dom';
+import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
+import { Carousel } from 'react-responsive-carousel';
 import art1 from '../../assets/images/image1.png';
 import art2 from '../../assets/images/image2.png';
 import art3 from '../../assets/images/image3.png';
@@ -8,11 +11,22 @@ function Home() {
     return (
         <main>
             
-            <div className='d-flex flex-row justify-content-around flex-wrap p-4'>
-                <img className='d-flex' src={art1} alt='CMA Art'></img>
-                <img className='d-flex' src={art2} alt='CMA Art'></img>
-                <img className='d-flex' src={art3} alt='CMA Art'></img>
-                <img className='d-flex' src={art4} alt='CMA Art'></img>
+            <div className='backgroundImg d-flex flex-row justify-content-around flex-wrap p-4'>
+            <Carousel autoPlay={true} showStatus={false} infiniteLoop={true} showThumbs={false} showIndicators={false} showArrows={false} dynamicHeight={true}>
+                <div classsName= 'carousel'>
+                    <img classname='carousel' src={art1} />
+                </div>
+                <div>
+                    <img classname='carousel' src={art2} />
+                </div>
+                <div>
+                    <img classname='carousel' src={art3} />
+                </div>
+                <div>
+                    <img classname='carousel' src={art4} />
+                </div>
+            </Carousel>
+
             </div>
             <div className='missionStatement d-flex flex-column align-items-center p-4'>
                 <h2>Mission:</h2>

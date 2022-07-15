@@ -27,7 +27,7 @@ export const LOGIN_USER = gql`
 
 export const ADD_POST = gql`
   mutation addPost($title: String!, $postContent: String!) {
-    login(title: $title, postContent: $postContent) {
+    addPost(title: $title, postContent: $postContent) {
       token
       user {
         _id

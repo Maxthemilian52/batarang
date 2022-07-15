@@ -26,9 +26,8 @@ const AddPost = () => {
         
         try {
             const { data } = await createPost({
-                variable: { ...formState },
+                variables: { ...formState },
             })
-            // Auth.loggedIn();
         } catch (e) {
             console.error(e);
         }
@@ -59,7 +58,6 @@ const AddPost = () => {
                 />
                 <h6>Content:</h6>
                 <textarea
-                  
                   className="form-input"
                   placeholder="*Post Content"
                   name="postContent"
