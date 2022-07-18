@@ -33,6 +33,7 @@ const typeDefs = gql`
       }
 
       type Post {
+        _id: ID
         title: String
         postContent: String
         postAuthor: String

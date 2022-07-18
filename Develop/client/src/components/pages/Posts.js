@@ -1,6 +1,7 @@
 import React from 'react';
 import { useQuery } from '@apollo/client';
 import { QUERY_POSTS } from '../../utils/queries/queries';
+import { Link } from 'react-router-dom';
 
 function Posts() {
     const { loading, data } = useQuery(QUERY_POSTS);
@@ -15,10 +16,10 @@ function Posts() {
                         <h2>Posts</h2>
                         <a className="navBtn" href='/addpost'><button className="btn btn-light">Add Post</button></a>
                     </div>
-                        <div className='card w-100'>
+                        <div>
             
                             {posts.map((post,i) => (
-                                <><div className=''>
+                                <div key={post._id} className='card w-100'><div>
                                     <div className='w-100 d-flex flex-row justify-content-between'>
                                         <div>
                                             <h4>{post.title} </h4>
@@ -38,9 +39,9 @@ function Posts() {
                                             <h4>{post.postAuthor}</h4>
                                         </div>
                                         <div>
-                                            <a className="navBtn" href='/posts/:id'><button className="btn btn-light">Comments</button></a>
+                                            <Link className="navBtn" to={`/post/${post._id}`}><button className="btn btn-light">Comments</button></Link>
                                         </div>
-                                    </div></>
+                                    </div></div>
                             
             
                             ))}
