@@ -1,6 +1,6 @@
 const { AuthenticationError } = require('apollo-server-express');
 const { Event, Post, User } = require('../models');
-const { signToken } = require('../utils/auth')
+const { signToken, authMiddleware } = require('../utils/auth')
 
 const resolvers = {
     Query: {
@@ -50,18 +50,19 @@ Mutation: {
     return { token, user };
   },
   addPost: async (parent, { title, postContent }, context) => {
+    console.log(context)
     if (context.user) {
       const post = await Post.create({
         postContent,
         title,
-        postAuthor: context.user.firstName.lastName,
+        postAuthor: context.user.lastName,
       });
       
       await User.findOneAndUpdate(
         { _id: context.user._id },
         { $addToSet: { posts: post._id } }
       );
-
+        
       return post;
     }
     throw new AuthenticationError('You need to be logged in!');
@@ -70,7 +71,7 @@ Mutation: {
     if (context.user) {
       const post = await Post.findOneAndDelete({
         _id: postId,
-        postAuthor: context.user.firstName.lastName,
+        postAuthor: context.user.lastName,
       });
 
       await User.findOneAndUpdate(
