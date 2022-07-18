@@ -3,10 +3,26 @@ import { gql } from '@apollo/client';
 export const QUERY_POSTS = gql`
   query allPosts {
     allPosts {
+      _id
       title
       postContent
       createdAt
       postAuthor
+    }
+  }
+`;
+
+export const QUERY_POST = gql`
+  query post($postId: ID!) {
+    post(postId: $postId) {
+      _id
+      title
+      postContent
+      createdAt
+      postAuthor
+        comments {
+          commentBody
+        } 
     }
   }
 `;
