@@ -3,6 +3,7 @@ import { useQuery } from '@apollo/client';
 import { QUERY_POST } from '../../utils/queries/queries';
 import { useParams } from 'react-router-dom';
 import CommentList from '../Comments/CommentList'
+import CommentForm from '../Comments/CommentForm'
 
 function SinglePost() {
     const { postId } = useParams();
@@ -53,7 +54,7 @@ function SinglePost() {
                                     <h2>Comments</h2>
                                 </div>
                                 <div>
-                                    {/* <AddComment /> */}
+                                    <CommentForm postId={post._id}/>
                                 </div>
                                 <CommentList comments={post.comments} />
                                 </div>
