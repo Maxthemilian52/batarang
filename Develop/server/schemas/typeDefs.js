@@ -33,10 +33,12 @@ const typeDefs = gql`
       }
 
       type Post {
-        postBody: String
+        title: String
+        postContent: String
         postAuthor: String
         createdAt: String
         comments: [Comment]!
+        user: User
       }
 
       type Query {
@@ -51,7 +53,7 @@ const typeDefs = gql`
     type Mutation {
       addProfile(firstName: String!, lastName: String!, email: String!, phone: String!, address: String!, team: String, position: String, gradYear: String! password: String!): Auth
       login(email: String!, password: String!): Auth
-      addPost(title: String!, postContent: String!): Auth
+      addPost(title: String!, postContent: String!): Post
       removePost(postId: ID!): Post
       addComment(postId: ID!, commentBody: String!): Post
       removeComment(posttId: ID!, commentId: ID!): Post

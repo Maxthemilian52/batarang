@@ -2,7 +2,11 @@ const { Schema, model } = require("mongoose")
 const dateFormat = require("../utils/dateFormat")
 const postSchema = new Schema(
     {
-        postBody: {
+      title: {
+        type: String,
+        required: true,
+    },
+        postContent: {
             type: String,
             required: true,
         },
