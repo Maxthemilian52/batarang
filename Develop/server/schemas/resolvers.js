@@ -17,7 +17,7 @@ const resolvers = {
       //   const params = postAuthor ? { postAuthor } : {};
       //   return Post.find(params).sort({ createdAt: -1 });
       // },
-      event: async () => {
+      allEvents: async () => {
         return Event.find({});
       },
       allPosts: async () => {
@@ -83,13 +83,13 @@ Mutation: {
     }
     throw new AuthenticationError('You need to be logged in!');
   },
-  addComment: async (parent, { postId, commentText }, context) => {
+  addComment: async (parent, { postId, commentBody }, context) => {
     if (context.user) {
       return Post.findOneAndUpdate(
         { _id: postId },
         {
           $addToSet: {
-            comments: { commentBody, commentAuthor: context.user.firstName.lastName },
+            comments: { commentBody, commentAuthor: context.user.lastName },
           },
         },
         {
@@ -108,7 +108,7 @@ Mutation: {
           $pull: {
             comments: {
               _id: commentId,
-              commentAuthor: context.user.firstName.lastName,
+              commentAuthor: context.user.lastName,
             },
           },
         },

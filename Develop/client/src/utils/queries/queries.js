@@ -11,6 +11,16 @@ export const QUERY_POSTS = gql`
   }
 `;
 
+export const QUERY_EVENTS = gql`
+  query allEvents {
+    allEvents {
+      eventName
+      date
+      eventSummary
+      volunteers
+    }
+  }
+`;
 export const QUERY_USERS = gql`
   query allUsers {
     allUsers {
