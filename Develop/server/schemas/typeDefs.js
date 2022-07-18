@@ -42,7 +42,7 @@ const typeDefs = gql`
       }
 
       type Query {
-        users: [User]
+        allUsers: [User]
         user(email: String!): User
         event: [Event]
         comment: [Comment]
