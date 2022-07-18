@@ -8,7 +8,7 @@ function Posts() {
 
 
     return (
-        <body>
+        <main>
             <div className='postPage'>
                 <div className='card postCard outlineCard align-items-center'>
                     <div>
@@ -47,7 +47,7 @@ function Posts() {
                 </div>
                 </div>
         </div>
-    </body>
+    </main>
     );
 }
 

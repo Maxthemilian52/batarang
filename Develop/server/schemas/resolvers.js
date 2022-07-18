@@ -4,7 +4,7 @@ const { signToken, authMiddleware } = require('../utils/auth')
 
 const resolvers = {
     Query: {
-      users: async () => {
+      allUsers: async () => {
         return User.find({});
       },
       user: async (parent, { email }) => {

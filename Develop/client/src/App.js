@@ -10,6 +10,7 @@ import AddPost from './components/pages/AddPost'
 import Signup from './components/pages/Signup'
 import Events from './components/pages/Events'
 import Login from './components/pages/Login'
+import Directory from './components/pages/Directory'
 
 const httpLink = createHttpLink({
   uri: '/graphql',
@@ -60,10 +61,10 @@ function App() {
             path="/addpost"
             element={<AddPost />}
             />
-            {/* <Route 
+            <Route 
               path="/directory" 
               element={<Directory />}
-            /> */}
+            /> 
             <Route 
               path="/events"
               element={<Events />}

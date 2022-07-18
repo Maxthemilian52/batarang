@@ -21,3 +21,17 @@ export const QUERY_EVENTS = gql`
     }
   }
 `;
+export const QUERY_USERS = gql`
+  query allUsers {
+    allUsers {
+      firstName
+      lastName
+      email
+      phone
+      address
+      team
+      position
+      gradYear
+    }
+  }
+`;
