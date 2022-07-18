@@ -1,9 +1,10 @@
-import React, { useState } from 'react';
-// import { QUERY_POSTS} from '../../utils/queries'
-
+import React from 'react';
+import { useQuery } from '@apollo/client';
+import { QUERY_POSTS } from '../../utils/queries/queries';
 
 function Posts() {
-    //database call posts.findall()
+    const { loading, data } = useQuery(QUERY_POSTS);
+    const posts = data?.allPosts || [];
 
 
     return (
@@ -16,25 +17,25 @@ function Posts() {
                     </div>
                         <div className='card w-100'>
             
-                            {post.map((post,i) => (
+                            {posts.map((post,i) => (
                                 <><div className=''>
                                     <div className='w-100 d-flex flex-row justify-content-between'>
                                         <div>
-                                            <h4>Date Posted: {post.title} </h4>
+                                            <h4>{post.title} </h4>
                                         </div>
 
                                         <div>
 
-                                            <h5>{post.date}</h5>
+                                            <h5>{post.createdAt}</h5>
                                         </div>
                                     </div>
                                 </div><div className=''>
 
-                                        <p>{post.content}</p>
+                                        <p>{post.postContent}</p>
                                     </div><div className='w-100 d-flex flex-row justify-content-between'>
                                         <div>
 
-                                            <h4>{post.user}</h4>
+                                            <h4>{post.postAuthor}</h4>
                                         </div>
                                         <div>
                                             <a className="navBtn" href='/posts/:id'><button className="btn btn-light">Comments</button></a>
@@ -42,7 +43,7 @@ function Posts() {
                                     </div></>
                             
             
-                            ))};
+                            ))}
                 </div>
                 </div>
         </div>
