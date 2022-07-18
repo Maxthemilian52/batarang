@@ -10,3 +10,14 @@ export const QUERY_POSTS = gql`
     }
   }
 `;
+
+export const QUERY_EVENTS = gql`
+  query allEvents {
+    allEvents {
+      eventName
+      date
+      eventSummary
+      volunteers
+    }
+  }
+`;

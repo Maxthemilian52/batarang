@@ -6,11 +6,14 @@ const eventSchema = new Schema({
         required: true,
     },
     date: {
-        type: Date,
-        default: Date.now(),
+        type: String,
         required: true,
     },
-    voulunteers: {
+    eventSummary: {
+        type: String,
+        required: true,
+    },
+    volunteers: {
         type: String,
     },
 })

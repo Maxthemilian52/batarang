@@ -1,27 +1,3 @@
-[
-    {
-        "postBody": "David is a JS Native",
-        "postAuthor": "asdf",
-        "firstName": "max",
-        "lastName": "shaw"
-
-    },
-    {
-        "postBody": "David is a JS Native",
-        "postAuthor": "asdfdf",
-        "firstName": "bill",
-        "lastName": "hardgrove"
-    },
-    {
-        "postBody": "David is a JS Native",
-        "postAuthor": "asdfasdf",
-        "firstName": "david",
-        "lastName": "deitz"
-    },
-    {
-        "postBody": "David is a JS Native",
-        "postAuthor": "asdfae",
-        "firstName": "marcus",
-        "lastName": "martinez"
-    }
-]
+{
+    
+}
