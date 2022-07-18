@@ -20,7 +20,7 @@ const resolvers = {
       event: async () => {
         return Event.find({});
       },
-      posts: async () => {
+      allPosts: async () => {
         return Post.find({});
       },
     },

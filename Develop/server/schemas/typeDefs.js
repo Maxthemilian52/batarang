@@ -46,7 +46,7 @@ const typeDefs = gql`
         user(email: String!): User
         event: [Event]
         comment: [Comment]
-        posts: [Post]
+        allPosts: [Post]
         post(postId: ID!): Post
       }
     
