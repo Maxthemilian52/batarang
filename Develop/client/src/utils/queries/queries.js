@@ -22,6 +22,8 @@ export const QUERY_POST = gql`
       postAuthor
         comments {
           commentBody
+          commentAuthor
+          createdAt
         } 
     }
   }

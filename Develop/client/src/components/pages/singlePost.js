@@ -17,8 +17,8 @@ function SinglePost() {
     return (
         <main>
         <div className='postPage'>
-            <div className='card postCard outlineCard align-items-center'>
-                <div>
+            <div className='card postCard outlineCard '>
+                <div className='d-flex flex-column align-items-center'>
                     <h2>Posts</h2>
                     <a className="navBtn" href='/addpost'><button className="btn btn-light">Add Post</button></a>
                 </div>
@@ -27,12 +27,9 @@ function SinglePost() {
                         
                             <div className='card'><div className=''>
                                 <div className='w-100 d-flex flex-row justify-content-between'>
-                                    <div>
+                                    <div className='card-header d-flex justify-content-between w-100'>
                                         <h4>{post.title} </h4>
-                                    </div>
-
-                                    <div>
-
+                                   
                                         <h5>{post.createdAt}</h5>
                                     </div>
                                 </div>
@@ -56,7 +53,10 @@ function SinglePost() {
                                 <div>
                                     <CommentForm postId={post._id}/>
                                 </div>
-                                <CommentList comments={post.comments} />
+                                
+                                </div>
+                                <div className='card'>
+                                    <CommentList comments={post.comments} />
                                 </div>
                         
         
