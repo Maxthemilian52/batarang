@@ -14,16 +14,16 @@ function Home() {
             <div className='backgroundImg d-flex flex-row justify-content-around flex-wrap p-4'>
             <Carousel autoPlay={true} showStatus={false} infiniteLoop={true} showThumbs={false} showIndicators={false} showArrows={false} dynamicHeight={true}>
                 <div classsName= 'carousel'>
-                    <img classname='carousel' src={art1} />
+                    <img className='carousel' src={art1} alt='CMA Art'/>
                 </div>
                 <div>
-                    <img classname='carousel' src={art2} />
+                    <img className='carousel' src={art2} alt='CMA Art' />
                 </div>
                 <div>
-                    <img classname='carousel' src={art3} />
+                    <img className='carousel' src={art3} alt='CMA Art'/>
                 </div>
                 <div>
-                    <img classname='carousel' src={art4} />
+                    <img className='carousel' src={art4} alt='CMA Art'/>
                 </div>
             </Carousel>
 

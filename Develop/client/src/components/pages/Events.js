@@ -12,14 +12,16 @@ function Events() {
     return (
         <main>
             <div>
-                <div className="allEvents">
-                        <div className="e">
+                <div className="allEvents d-flex justify-content-center">
+                        <div className="card postCard outlineCard">
+                        <div className='d-flex justify-content-center'>
+                            <h2>Events</h2>
+                        </div>
                             {events.map((event,i) => (
-                            <div className="event1">
-                                <h2>{event.eventName}</h2> 
+                            <div className="card w-100">
+                                <div className='card-header d-flex justify-content-between w-100'><h4>{event.eventName}</h4><h6>Start Date: {event.date}</h6></div> 
                                 <p>{event.eventSummary}</p>
-                                <h3>{event.date}</h3>
-                                <h3>{event.volunteers}</h3>
+                                <h5>Volunteers: {event.volunteers}</h5>
                             </div>
                             ))}
                         </div>
