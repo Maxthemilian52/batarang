@@ -4,29 +4,29 @@ import { QUERY_USERS } from '../../utils/queries/queries';
 
 function Directory() {
     const { loading, data } = useQuery(QUERY_USERS);
-    const users = data?.allUsers || [];
-
+    let users = data?.allUsers || [];
+    users = [...users].sort((a,b) => a.lastName > b.lastName ? 1 : -1);
     return (
         <main>
             <div className='postPage'>
                 <div className='card postCard outlineCard justify-content-center'>
-                    <div>
+                    <div className='d-flex justify-content-center'>
                         <h2>Docent Directory</h2>
                     </div>
                         <div>
             
                             {users.map((user,i) => (
-                                <><div className='card p-4 d-flex align-items-center w-100'>
+                                <><div className='card p-4 d-flex w-100'>
                                     <div>
-                                        <h2>{user.firstName} {user.lastName}</h2>
-                                        <h3>{user.email}</h3>
-                                        <h3>{user.phone}</h3>
-                                        <h4>{user.address}</h4>
+                                        <h3 className='card-header'>{user.firstName} {user.lastName}</h3>
+                                        <h4>{user.email}</h4>
+                                        <h5>{user.phone}</h5>
+                                        <h5>{user.address}</h5>
                                     </div>
                                     <div>
-                                        <h4>Team: {user.team}</h4>
-                                        <h4>Position: {user.position}</h4>
-                                        <h4>GradYear: {user.gradYear}</h4>
+                                        <h6>Team: {user.team}</h6>
+                                        <h6>Position: {user.position}</h6>
+                                        <h6>GradYear: {user.gradYear}</h6>
                                     </div>
                                     </div></>
                             

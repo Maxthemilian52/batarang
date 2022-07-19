@@ -46,9 +46,9 @@ function Header() {
                     <h1>CMA Docent</h1>
                 </div>
                 <div >
-                    <a href='www.facebook.com'><img className="icon" src={Facebook}></img></a>
-                    <a href='www.twitter.com'><img className="icon" src={Twitter}></img></a>
-                    <a href='www.instagram.com'><img className="icon" src={Instagram}></img></a>
+                    <a href='www.facebook.com'><img className="icon" src={Facebook} alt="Facebook"></img></a>
+                    <a href='www.twitter.com'><img className="icon" src={Twitter} alt="Twitter"></img></a>
+                    <a href='www.instagram.com'><img className="icon" src={Instagram} alt="Instagram"></img></a>
                 </div>
             </div>
             <div className="d-flex justify-content-around header2 align-items-center">

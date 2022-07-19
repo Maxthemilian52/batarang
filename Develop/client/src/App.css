@@ -5,7 +5,12 @@ p {
 ul {
   font-size: 1.25rem;
 }
-
+body {
+  background-color: #FAF9F6;
+}
+main {
+  background-color: #FAF9F6;
+}
 .App {
   text-align: center;
 }
@@ -58,7 +63,7 @@ ul {
 }
 
 .header2 { 
-  background-color: white;
+  background-color: #FAF9F6;
 }
 
 .navBtn {
@@ -68,7 +73,7 @@ ul {
 }
 
 .btn {
-  background-color: white;
+  background-color: #FAF9F6;
   font-size: 1.5rem;
 }
 
@@ -81,6 +86,7 @@ ul {
   padding: 0.3rem;
   overflow: visible;
   width: 100%;
+  background-color: #FAF9F6;
 }
 
 .postPage {
@@ -117,7 +123,6 @@ ul {
   border-radius: 0px;
   padding: 1rem;
   margin: 4px;
-
 }
 
 textarea {
@@ -160,7 +165,7 @@ input {
   display: flex;
   flex-direction: row;
   width: 10 1rem;
-  height: 700px;
+ 
   background-color: none;
   margin: 2%;
 }
