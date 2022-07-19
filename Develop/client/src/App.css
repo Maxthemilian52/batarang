@@ -64,10 +64,12 @@ ul {
 .navBtn {
   border: none;
   padding: 0.3rem; 
+  font-size: 2rem;
 }
 
 .btn {
   background-color: white;
+  font-size: 1.5rem;
 }
 
 .btn:hover {
@@ -78,6 +80,7 @@ ul {
 .card {
   padding: 0.3rem;
   overflow: visible;
+  width: 100%;
 }
 
 .postPage {
@@ -89,7 +92,7 @@ ul {
 }
 
 .postCard {
-  width: 55%;
+  width: 80%;
 }
 
 .eventCard {
@@ -198,6 +201,7 @@ input {
 a {
   text-decoration: none;
   color: black;
+  font-size: 2rem;
 }
 
 a:hover {
@@ -251,4 +255,33 @@ display: flex;
 flex-direction: column;
 align-items: center;
 justify-content: center;
+}
+
+@media screen and (max-width: 600px) {
+
+  body {
+    font-size: 80%;
+  }
+  
+  .card {
+    width: 100%;
+  }
+
+  .outlineCard {
+    width: 100%;
+  }
+  .postCard {
+    width: 100%;
+    
+  }
+
+  .postPage {
+    width: 80%;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+  }
+  .date {
+    font-size: 0.75rem;
+  }
 }

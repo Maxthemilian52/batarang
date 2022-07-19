@@ -33,7 +33,7 @@ const CommentForm = ({ postId }) => {
   };
 
   return (
-    <div>
+    <div className='d-flex flex-column align-items-center w-100'>
       <h4>What are your thoughts on this thought?</h4>
       <p
         className={`m-0 ${
@@ -44,10 +44,10 @@ const CommentForm = ({ postId }) => {
         {error && <span className="ml-2">Something went wrong...</span>}
       </p>
       <form
-        className="flex-row justify-center justify-space-between-md align-center"
+        className="w-100"
         onSubmit={handleFormSubmit}
       >
-        <div className="col-12 col-lg-9">
+        <div className=" w-100">
           <textarea
             name="commentBody"
             placeholder="Add your comment..."
@@ -58,8 +58,8 @@ const CommentForm = ({ postId }) => {
           ></textarea>
         </div>
 
-        <div className="col-12 col-lg-3">
-          <button className="btn btn-primary btn-block py-3" type="submit">
+        <div className="d-flex justify-content-center">
+          <button className="btn btn-light py-3" type="submit">
             Add Comment
           </button>
         </div>

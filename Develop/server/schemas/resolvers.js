@@ -85,11 +85,12 @@ Mutation: {
   },
   addComment: async (parent, { postId, commentBody }, context) => {
     if (context.user) {
+      const commentAuthor = context.user.lastName
       return Post.findOneAndUpdate(
         { _id: postId },
         {
           $addToSet: {
-            comments: { commentBody, commentAuthor: context.user.lastName },
+            comments: { commentBody, commentAuthor: commentAuthor },
           },
         },
         {

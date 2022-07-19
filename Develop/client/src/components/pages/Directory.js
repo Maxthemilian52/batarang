@@ -9,14 +9,14 @@ function Directory() {
     return (
         <main>
             <div className='postPage'>
-                <div className='card postCard outlineCard align-items-center'>
+                <div className='card postCard outlineCard justify-content-center'>
                     <div>
                         <h2>Docent Directory</h2>
                     </div>
                         <div>
             
                             {users.map((user,i) => (
-                                <><div className='card w-100'>
+                                <><div className='card p-4 d-flex align-items-center w-100'>
                                     <div>
                                         <h2>{user.firstName} {user.lastName}</h2>
                                         <h3>{user.email}</h3>
