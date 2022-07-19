@@ -1,57 +1,57 @@
 [
     {
         "password": "password1",
-        "firstName": "First1",
-        "lastName": "Last1",
+        "firstName": "William",
+        "lastName": "Hardgrove",
         "email": "email@email1.com",
         "phone": "111-111-1111",
         "address": "123 Test Dr. Columbus, Oh 43210",
         "team": "team1",
-        "position": "BossBitch1",
+        "position": "Boss1",
         "gradYear": "2011"
     },
     {
         "password": "password2",
-        "firstName": "First2",
-        "lastName": "Last2",
+        "firstName": "David",
+        "lastName": "Deitz",
         "email": "email@email2.com",
         "phone": "111-111-1112",
         "address": "1234 Test Dr. Columbus, Oh 43210",
         "team": "team2",
-        "position": "BossBitch2",
+        "position": "Boss2",
         "gradYear": "2012"
     },
     {
         "password": "password3",
-        "firstName": "First3",
-        "lastName": "Last3",
+        "firstName": "Max",
+        "lastName": "Shaw",
         "email": "email@email3.com",
         "phone": "111-111-1113",
         "address": "12345 Test Dr. Columbus, Oh 43210",
         "team": "team3",
-        "position": "BossBitch3",
+        "position": "Boss3",
         "gradYear": "2013"
     },
     {
         "password": "password4",
-        "firstName": "First4",
-        "lastName": "Last4",
+        "firstName": "Marcus",
+        "lastName": "Martinez",
         "email": "email@email4.com",
         "phone": "111-111-1114",
         "address": "123456 Test Dr. Columbus, Oh 43210",
         "team": "team4",
-        "position": "BossBitch4",
+        "position": "Boss4",
         "gradYear": "2014"
     },
     {
         "password": "password5",
-        "firstName": "First5",
-        "lastName": "Last5",
+        "firstName": "Sally",
+        "lastName": "Struthers",
         "email": "email@emai5.com",
         "phone": "111-111-1115",
         "address": "1 Test Dr. Columbus, Oh 43210",
-        "team": "team4",
-        "position": "BossBitch4",
-        "gradYear": "2014"
+        "team": "team5",
+        "position": "Boss5",
+        "gradYear": "2015"
     }
 ]
