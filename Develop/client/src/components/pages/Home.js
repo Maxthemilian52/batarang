@@ -6,6 +6,12 @@ import art1 from '../../assets/images/image1.png';
 import art2 from '../../assets/images/image2.png';
 import art3 from '../../assets/images/image3.png';
 import art4 from '../../assets/images/image4.png';
+import art5 from '../../assets/images/cma1.png';
+import art6 from '../../assets/images/cma2.png'
+import art7 from '../../assets/images/cma3.png'
+import art8 from '../../assets/images/cma4.png'
+import art9 from '../../assets/images/cma5.png'
+import art10 from '../../assets/images/cma6.png'
 
 function Home() {
     return (
@@ -24,6 +30,24 @@ function Home() {
                 </div>
                 <div>
                     <img className='carousel' src={art4} alt='CMA Art'/>
+                </div>
+                <div>
+                    <img className='carousel' src={art5} alt='CMA Art'/>
+                </div>
+                <div>
+                    <img className='carousel' src={art6} alt='CMA Art'/>
+                </div>
+                <div>
+                    <img className='carousel' src={art7} alt='CMA Art'/>
+                </div>
+                <div>
+                    <img className='carousel' src={art8} alt='CMA Art'/>
+                </div>
+                <div>
+                    <img className='carousel' src={art9} alt='CMA Art'/>
+                </div>
+                <div>
+                    <img className='carousel' src={art10} alt='CMA Art'/>
                 </div>
             </Carousel>
 
